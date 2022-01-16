@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/all.css"> <!-- font awesome css-->
+    <title>Main</title>
+</head>
+<body>
+    <div class="left-bar">
+        <div class="title-container">
+            <img class="logo" src="img/logo-orange.png">
+            <a class="logo-title" href="index.html">funcode</h1>
+        </div>
+        
+        <div class="nav-menu">
+            <a href="#" class="nav-link">
+                <i class="fas fa-home"></i>
+                <span class="nav-text">Home</span>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-users"></i>
+                <span class="nav-text">Following</span>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-compact-disc"></i>
+                <span class="nav-text">Playlists</span>
+            </a>
+        </div>
+        <hr>
+    </div>
+    <div class="main">
+        <div class="top-container">
+            <div class="bar-corner"></div>
+            <div class="search-bar">
+                <form class="search-form">
+                    <input class="search-input" placeholder="Song, author, etc...">
+                    <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <p class="header-1">Genres</p>
+        <div class="genres-container">
+            <div>
+                <a class="genre-box orange" href="#">
+                    <img src="img/rock.png">
+                </a>
+                <p class="orange">Rock</p>
+            </div>
+            <div>
+                <a class="genre-box purple" href="#">
+                    <img src="img/pop.png">
+                </a>
+                <p class="purple">Pop</p>
+            </div>
+            <div>
+                <a class="genre-box cyan" href="#">
+                    <img src="img/electronic.png">
+                </a>
+                <p class="cyan">Electronic</p>
+            </div>
+            <div>
+                <a class="genre-box yellow" href="#">
+                    <img src="img/classical.png">
+                </a>
+                <p class="yellow">Classical</p>
+            </div>
+            <div>
+                <a class="genre-box" href="#">
+                    <img src="img/more.png">
+                </a>
+                <p>More</p>
+            </div>
+        </div>
+
+        <p class="header-1">Recommendations</p>
+        <div class="videos-container">
+            <div class="video-content">
+                <div class="video-box">
+                    <a href="#">
+                        <img class="play-btn" src="img/play.png">
+                    </a>
+                </div>
+                <div class="preview-container">
+                    <input type="checkbox" id="preview-play1" class="hidebox">
+                    <label class="preview-btn" for="preview-play1"></label>
+                    <input type="range" min="1" max="100" value="30" class="preview-slider">
+                </div>
+                <p>Check this awesome guide</p>
+            </div>
+            
+            <div class="video-content">
+                <div class="video-box">
+                    <a href="#">
+                        <img class="play-btn" src="img/play.png">
+                    </a>
+                </div>
+                <div class="preview-container">
+                    <input type="checkbox" id="preview-play2" class="hidebox">
+                    <label class="preview-btn" for="preview-play2"></label>
+                    <input type="range" min="1" max="100" value="0" class="preview-slider">
+                </div>
+                <p>This plugin changes everything</p>
+            </div>
+
+            <div class="video-content">
+                <div class="video-box">
+                    <a href="#">
+                        <img class="play-btn" src="img/play.png">
+                    </a>
+                </div>
+                <div class="preview-container">
+                    <input type="checkbox" id="preview-play3" class="hidebox">
+                    <label class="preview-btn" for="preview-play3"></label>
+                    <input type="range" min="1" max="100" value="0" class="preview-slider">
+                </div>
+                <p>How to create drum track</p>
+            </div>
+
+            <div class="video-content">
+                <div class="video-box">
+                    <a href="#">
+                        <img class="play-btn" src="img/play.png">
+                    </a>
+                </div>
+                <div class="preview-container">
+                    <input type="checkbox" id="preview-play4" class="hidebox">
+                    <label class="preview-btn" for="preview-play4"></label>
+                    <input type="range" min="1" max="100" value="0" class="preview-slider">
+                </div>
+                <p>How to play Mozart</p>
+            </div>
+        </div>
+    </div>
+        
+</body>
+</html>

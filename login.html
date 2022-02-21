@@ -20,9 +20,16 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-dark bg-black sticky-top">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+          
+          <!-- Search form -->
+          <form class="d-flex justify-content-center w-50">
+            <input class="form-control bg-black border border-warning text-white" id="search-input" type="search" placeholder="Song, author, etc..." aria-label="Search">
+            <button class="btn btn-outline-warning" type="submit" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Search"><i class="fas fa-search"></i></button>
+          </form>
 
           <!-- User -->
           <form action="profile.html" >
@@ -34,24 +41,26 @@
             <div class="offcanvas-header bg-black">
                 <a class="navbar-brand" href="index.html">
                     <img src="img/logo-orange.png" alt="" width="35" height="35" class="d-inline-block align-text-top">
-                    <span class="logo-title  align-text-top">beatbit</span>
+                    <span class="logo-title align-text-top">beatbit</span>
                 </a>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-light shadow-none" style="font-size: 18px;" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
             </div>
             <div class="offcanvas-body bg-black">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="home.html"><i class="fas fa-home"></i> Home</a>
+                  <a class="nav-link active" aria-current="page" href="home.html"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"><i class="fas fa-users"></i> Following</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-compact-disc"></i> Playlists</a>
+                    <a class="nav-link" href="playlists.html"><i class="fas fa-compact-disc"></i> Playlists</a>
                 </li>
                 <hr/>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-cogs"></i> Settings</a>
+                    <a class="nav-link" href="settings.html"><i class="fas fa-cogs"></i> Settings</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a>

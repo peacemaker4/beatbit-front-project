@@ -56,7 +56,7 @@
             <div class="offcanvas-body bg-black">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="home.html"><i class="fas fa-home"></i> Home</a>
+                  <a class="nav-link" aria-current="page" href="home.html"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"><i class="fas fa-users"></i> Following</a>
@@ -66,7 +66,7 @@
                 </li>
                 <hr/>
                 <li class="nav-item">
-                    <a class="nav-link" href="settings.html"><i class="fas fa-cogs"></i> Settings</a>
+                    <a class="nav-link active" href="settings.html" href="#"><i class="fas fa-cogs"></i> Settings</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a>
@@ -79,92 +79,39 @@
       </nav>
 
     <!-- MAIN -->
-    <div class="container-fluid profile-container" style="background-image: url('img/default-background.jpg');">
-        <div class="text-center">
-            <img src="img/default-profile.png" class="border border-warning rounded-circle" style="width: 256px; height: 256px;" alt="profilepic">
-            <h1 id="username-header" class="text-light"></h1>
-            <p id="email-info" class="text-light"></p>
-            <br>
-            <p id="description" class="text-light"></p>
-        </div>
+    
+    <div class="settings-container container-fluid w-75 bg-light">
+        <h1 class="text-center">Settings <i class="fa-solid fa-sliders"></i></h1>
+        <form id="update-form">
+            <div class="mb-3">
+                <label for="change-email-input" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="change-email-input" name="change-email-input" placeholder="name@mail.com">
+            </div>
+            <div class="mb-3">
+                <label for="change-username-input" class="form-label">Username</label>
+                <input type="username" class="form-control" id="change-username-input" name="change-username-input" placeholder="Your name is...">
+            </div>
+            <div class="mb-3">
+                <label for="change-description-input" class="form-label">Description</label>
+                <textarea class="form-control" id="change-description-input" name="change-description-input" rows="3"></textarea>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="submit" type="button">Save <i class="fa-solid fa-check"></i></button>
+            </div>
+        </form>
     </div>
 
-    <!-- Channels -->
-    <p class="header-1 d-flex justify-content-center">Subscribed to</p>
-    <div class="genres-container d-flex justify-content-center">
-        <div>
-            <a type="button" class="channel-box border border-danger rounded-circle btn-outline-light" href="#">
-                <img src="img/profile-1.jpg">
-            </a>
-            <p class="text-danger">MewDiePie</p>
-        </div>
-        <div>
-            <a type="button" class="channel-box border border-primary rounded-circle btn-outline-light" href="#">
-                <img src="img/profile-2.jpg">
-            </a>
-            <p class="text-primary">Gentle Men</p>
-        </div>
-        <div>
-            <a type="button" class="channel-box border border-light rounded-circle btn-outline-light" href="#">
-                <img src="img/profile-3.jpg">
-            </a>
-            <p class="text-light">Golfisty Nation</p>
-        </div>
-        <div>
-            <a type="button" class="channel-box border border-warning rounded-circle btn-outline-light" href="#">
-                <img src="img/profile-4.jpg">
-            </a>
-            <p class="text-warning">The Network</p>
-        </div>
-        <div>
-            <a type="button" class="channel-box border border-info rounded-circle btn-outline-light" href="#">
-                <img src="img/black-bg.png">
-            </a>
-            <p class="text-info">Davie504</p>
-        </div>
-    </div>
-    
-    <!-- Genres -->
-    <p class="header-1 d-flex justify-content-center">Favorite genres</p>
-    <div class="genres-container d-flex justify-content-center">
-        <div>
-            <a type="button" class="genre-box border border-danger rounded-circle btn-outline-light" href="#">
-                <img src="img/pop.png">
-            </a>
-            <p class="text-danger">Pop</p>
-        </div>
-        <div>
-            <a type="button" class="genre-box border border-primary rounded-circle btn-outline-light" href="#">
-                <img src="img/electronic.png">
-            </a>
-            <p class="text-primary">Electronic</p>
-        </div>
-        <div>
-            <a type="button" class="genre-box border border-warning rounded-circle btn-outline-light" href="#">
-                <img src="img/rock.png">
-            </a>
-            <p class="text-warning">Rock</p>
-        </div>
-    </div>
-
-    
-    
     <script>
         $(document).ready(function(){
            $('[data-bs-toggle="tooltip"]').tooltip();
-
+        
            if(localStorage.getItem("user")!= null){
                 var user = JSON.parse(localStorage.getItem("user"));
-                $("#username-header").text(user.username)
-                $("#email-info").text(user.email)
-                $("#description").text(user.description)
+                $("#change-email-input").val(user.email)
+                $("#change-username-input").val(user.username)
+                $("#change-description-input").val(user.description)
             }
-            else{
-                $("#username-header").text("Please sign up to see your profile")
-                window.location.href="login.html";
-            }
-
-        });    
+        });
     </script>
 </body>
 </html>

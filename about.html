@@ -19,52 +19,61 @@
 <body class="gradient-3">
     <!-- NAVBAR -->
     <nav class="navbar navbar-dark bg-black sticky-top">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
+      <div class="container-fluid">
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon">
+              </span>
           </button>
+        
+        <!-- Search form -->
+        <form class="d-flex justify-content-center w-50">
+          <input class="form-control bg-black border border-warning text-white" id="search-input" type="search" placeholder="Song, author, etc..." aria-label="Search">
+          <button class="btn btn-outline-warning" type="submit" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Search"><i class="fas fa-search"></i></button>
+        </form>
 
-          <!-- User -->
-          <form action="profile.html" >
-            <button class="btn btn-outline-info rounded-circle" type="submit" data-bs-toggle="tooltip" data-bs-placement="bottom" title="User"><i class="far fa-user"></i></button>
-          </form>
-
-          <!-- Navigation -->
-          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header bg-black">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logo-orange.png" alt="" width="35" height="35" class="d-inline-block align-text-top">
-                    <span class="logo-title  align-text-top">beatbit</span>
-                </a>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body bg-black">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link" href="home.html"><i class="fas fa-home"></i> Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fas fa-users"></i> Following</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-compact-disc"></i> Playlists</a>
-                </li>
-                <hr/>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-cogs"></i> Settings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active"  aria-current="page" href="about.html"><i class="fas fa-info-circle"></i> About</a>
-                </li>
-              </ul>
-              
-            </div>
+        <!-- User -->
+        <form action="profile.html" >
+          <button class="btn btn-outline-info rounded-circle" type="submit" data-bs-toggle="tooltip" data-bs-placement="bottom" title="User"><i class="far fa-user"></i></button>
+        </form>
+        
+        <!-- Navigation -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header bg-black">
+              <a class="navbar-brand" href="index.html">
+                  <img src="img/logo-orange.png" alt="" width="35" height="35" class="d-inline-block align-text-top">
+                  <span class="logo-title align-text-top">beatbit</span>
+              </a>
+              <button type="button" class="btn-close text-light shadow-none" style="font-size: 18px;" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <i class="fa-solid fa-angle-right"></i>
+              </button>
+          </div>
+          <div class="offcanvas-body bg-black">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="home.html"><i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-users"></i> Following</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="playlists.html"><i class="fas fa-compact-disc"></i> Playlists</a>
+              </li>
+              <hr/>
+              <li class="nav-item">
+                  <a class="nav-link" href="settings.html"><i class="fas fa-cogs"></i> Settings</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="about.html"><i class="fas fa-info-circle"></i> About</a>
+              </li>
+            </ul>
+            
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
     <!-- MAIN -->
-    <div class="container w-75">
+    <div class="container-fluid w-75">
         <div class="d-flex justify-content-center">
             <div class="jumbotron bg-light w-100 mt-3 text-center">
                 <h1 class="display-4">About Us</h1>

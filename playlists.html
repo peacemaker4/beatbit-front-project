@@ -56,17 +56,17 @@
             <div class="offcanvas-body bg-black">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="home.html"><i class="fas fa-home"></i> Home</a>
+                  <a class="nav-link" aria-current="page" href="home.html"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"><i class="fas fa-users"></i> Following</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="playlists.html"><i class="fas fa-compact-disc"></i> Playlists</a>
+                    <a class="nav-link active" href="playlists.html"><i class="fas fa-compact-disc"></i> Playlists</a>
                 </li>
                 <hr/>
                 <li class="nav-item">
-                    <a class="nav-link" href="settings.html"><i class="fas fa-cogs"></i> Settings</a>
+                    <a class="nav-link" href="settings.html" href="#"><i class="fas fa-cogs"></i> Settings</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a>
@@ -79,92 +79,71 @@
       </nav>
 
     <!-- MAIN -->
-    <div class="container-fluid profile-container" style="background-image: url('img/default-background.jpg');">
-        <div class="text-center">
-            <img src="img/default-profile.png" class="border border-warning rounded-circle" style="width: 256px; height: 256px;" alt="profilepic">
-            <h1 id="username-header" class="text-light"></h1>
-            <p id="email-info" class="text-light"></p>
-            <br>
-            <p id="description" class="text-light"></p>
-        </div>
+    
+    <p class="header-1 d-flex justify-content-center">Your playlists</p>
+
+    <div class="d-flex justify-content-center mb-3">
+      <div id="myBtnContainer">
+        <button class="filter-btn" onclick="filterSelection('all')"> Show All</button>
+        <button class="filter-btn" onclick="filterSelection('instrumental')"> Instrumental</button>
+        <button class="filter-btn" onclick="filterSelection('software')"> Software</button>
+      </div>
     </div>
 
-    <!-- Channels -->
-    <p class="header-1 d-flex justify-content-center">Subscribed to</p>
-    <div class="genres-container d-flex justify-content-center">
-        <div>
-            <a type="button" class="channel-box border border-danger rounded-circle btn-outline-light" href="#">
-                <img src="img/profile-1.jpg">
-            </a>
-            <p class="text-danger">MewDiePie</p>
+    <div class="playlists-container d-flex justify-content-center">
+      <div class="filterDiv instrumental">
+        <div class="playlist-container border border-danger">
+          <img src="img/playlist-1.jpg" alt="Playlist" class="playlist-image">
+          <div class="playlist-overlay">
+            <button class="btn btn-danger playlist-text text-black"><i class="fa-solid fa-music"></i></button>
+          </div>
         </div>
-        <div>
-            <a type="button" class="channel-box border border-primary rounded-circle btn-outline-light" href="#">
-                <img src="img/profile-2.jpg">
-            </a>
-            <p class="text-primary">Gentle Men</p>
+        <p class="text-light">Guitar playlist</p>
+      </div>
+      <div class="filterDiv instrumental">
+        <div class="playlist-container border border-warning">
+          <img src="img/playlist-2.jpg" alt="Playlist" class="playlist-image">
+          <div class="playlist-overlay">
+            <button class="btn btn-warning playlist-text text-black"><i class="fa-solid fa-drum"></i></button>
+          </div>
         </div>
-        <div>
-            <a type="button" class="channel-box border border-light rounded-circle btn-outline-light" href="#">
-                <img src="img/profile-3.jpg">
-            </a>
-            <p class="text-light">Golfisty Nation</p>
+        <p class="text-light">Drum playlist</p>
+      </div>
+      <div class="filterDiv software">
+        <div class="playlist-container border border-success">
+          <img src="img/playlist-3.jpg" alt="Playlist" class="playlist-image">
+          <div class="playlist-overlay">
+            <button class="btn btn-success playlist-text text-black"><i class="fa-solid fa-circle-play"></i></button>
+          </div>
         </div>
-        <div>
-            <a type="button" class="channel-box border border-warning rounded-circle btn-outline-light" href="#">
-                <img src="img/profile-4.jpg">
-            </a>
-            <p class="text-warning">The Network</p>
+        <p class="text-light">Mixer playlist</p>
+      </div>
+      <div class="filterDiv instrumental">
+        <div class="playlist-container border border-light">
+          <img src="img/playlist-4.jpg" alt="Playlist" class="playlist-image">
+          <div class="playlist-overlay">
+            <button class="btn btn-light playlist-text text-black"><i class="fa-solid fa-compact-disc"></i></button>
+          </div>
         </div>
-        <div>
-            <a type="button" class="channel-box border border-info rounded-circle btn-outline-light" href="#">
-                <img src="img/black-bg.png">
-            </a>
-            <p class="text-info">Davie504</p>
+        <p class="text-light">Piano playlist</p>
+      </div>
+      <div class="filterDiv software">
+        <div class="playlist-container border border-info">
+          <img src="img/playlist-5.jpg" alt="Playlist" class="playlist-image">
+          <div class="playlist-overlay">
+            <button class="btn btn-info playlist-text text-black"><i class="fa-solid fa-file-audio"></i></button>
+          </div>
         </div>
-    </div>
-    
-    <!-- Genres -->
-    <p class="header-1 d-flex justify-content-center">Favorite genres</p>
-    <div class="genres-container d-flex justify-content-center">
-        <div>
-            <a type="button" class="genre-box border border-danger rounded-circle btn-outline-light" href="#">
-                <img src="img/pop.png">
-            </a>
-            <p class="text-danger">Pop</p>
-        </div>
-        <div>
-            <a type="button" class="genre-box border border-primary rounded-circle btn-outline-light" href="#">
-                <img src="img/electronic.png">
-            </a>
-            <p class="text-primary">Electronic</p>
-        </div>
-        <div>
-            <a type="button" class="genre-box border border-warning rounded-circle btn-outline-light" href="#">
-                <img src="img/rock.png">
-            </a>
-            <p class="text-warning">Rock</p>
-        </div>
+        <p class="text-light">Music softwares playlist</p>
+      </div>
+      
     </div>
 
-    
-    
     <script>
         $(document).ready(function(){
            $('[data-bs-toggle="tooltip"]').tooltip();
-
-           if(localStorage.getItem("user")!= null){
-                var user = JSON.parse(localStorage.getItem("user"));
-                $("#username-header").text(user.username)
-                $("#email-info").text(user.email)
-                $("#description").text(user.description)
-            }
-            else{
-                $("#username-header").text("Please sign up to see your profile")
-                window.location.href="login.html";
-            }
-
-        });    
+        });
+        filterSelection("all")
     </script>
 </body>
 </html>

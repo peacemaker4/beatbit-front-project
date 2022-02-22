@@ -38,7 +38,7 @@
           </form>
 
           <!-- User -->
-          <form action="profile.html" >
+          <form action="login.html" >
             <button class="btn btn-outline-info rounded-circle" type="submit" data-bs-toggle="tooltip" data-bs-placement="bottom" title="User"><i class="far fa-user"></i></button>
           </form>
           
@@ -79,6 +79,16 @@
       </nav>
 
     <!-- MAIN -->
+
+    <div class="container-fluid profile-container" style="background-image: url('img/default-background.jpg');">
+      <div class="text-center">
+          <img src="img/default-profile.png" class="border border-warning rounded-circle" style="width: 256px; height: 256px;" alt="profilepic">
+          <h1 id="username-header" class="text-light"></h1>
+          <p id="email-info" class="text-light"></p>
+          <br>
+          <p id="description" class="text-light"></p>
+      </div>
+  </div>
     
     <p class="header-1 d-flex justify-content-center">Your playlists</p>
 
@@ -136,7 +146,64 @@
         </div>
         <p class="text-light">Music softwares playlist</p>
       </div>
-      
+    </div>
+
+    <!-- Channels -->
+    <p class="header-1 d-flex justify-content-center">Subscribed to</p>
+    <div class="genres-container d-flex justify-content-center">
+        <div>
+            <a type="button" class="channel-box border border-danger rounded-circle btn-outline-light" href="#">
+                <img src="img/profile-1.jpg">
+            </a>
+            <p class="text-danger">MewDiePie</p>
+        </div>
+        <div>
+            <a type="button" class="channel-box border border-primary rounded-circle btn-outline-light" href="#">
+                <img src="img/profile-2.jpg">
+            </a>
+            <p class="text-primary">Gentle Men</p>
+        </div>
+        <div>
+            <a type="button" class="channel-box border border-light rounded-circle btn-outline-light" href="#">
+                <img src="img/profile-3.jpg">
+            </a>
+            <p class="text-light">Golfisty Nation</p>
+        </div>
+        <div>
+            <a type="button" class="channel-box border border-warning rounded-circle btn-outline-light" href="#">
+                <img src="img/profile-4.jpg">
+            </a>
+            <p class="text-warning">The Network</p>
+        </div>
+        <div>
+            <a type="button" class="channel-box border border-info rounded-circle btn-outline-light" href="#">
+                <img src="img/black-bg.png">
+            </a>
+            <p class="text-info">Davie504</p>
+        </div>
+    </div>
+    
+    <!-- Genres -->
+    <p class="header-1 d-flex justify-content-center">Favorite genres</p>
+    <div class="genres-container d-flex justify-content-center">
+        <div>
+            <a type="button" class="genre-box border border-danger rounded-circle btn-outline-light" href="#">
+                <img src="img/pop.png">
+            </a>
+            <p class="text-danger">Pop</p>
+        </div>
+        <div>
+            <a type="button" class="genre-box border border-primary rounded-circle btn-outline-light" href="#">
+                <img src="img/electronic.png">
+            </a>
+            <p class="text-primary">Electronic</p>
+        </div>
+        <div>
+            <a type="button" class="genre-box border border-warning rounded-circle btn-outline-light" href="#">
+                <img src="img/rock.png">
+            </a>
+            <p class="text-warning">Rock</p>
+        </div>
     </div>
 
     <script>
@@ -144,6 +211,16 @@
            $('[data-bs-toggle="tooltip"]').tooltip();
         });
         filterSelection("all")
+        if(localStorage.getItem("user")!= null){
+          var user = JSON.parse(localStorage.getItem("user"));
+          $("#username-header").text(user.username)
+          $("#email-info").text(user.email)
+          $("#description").text(user.description)
+        }
+        else{
+          $("#username-header").text("Please sign up to see your playlists")
+          window.location.href="login.html";
+        }
     </script>
 </body>
 </html>
